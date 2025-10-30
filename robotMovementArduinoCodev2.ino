@@ -114,12 +114,12 @@ void back() {
 // Turn Right Movements
 
 void turnRight45() {
-  Serial.println("Turning right 90 degrees.");
+  Serial.println("Turning right 45 degrees.");
   motor2.setSpeed(255);
   motor2.run(FORWARD);
   motor3.setSpeed(255);
   motor3.run(BACKWARD);
-  delay(250); // Adjust the delay as needed
+  delay(450); // Adjust the delay as needed
   Stop();
 }
 
@@ -129,22 +129,12 @@ void turnRight90() {
   motor2.run(FORWARD);
   motor3.setSpeed(255);
   motor3.run(BACKWARD);
-  delay(450); // Adjust the delay as needed
-  Stop();
-}
-
-void turnRight135() {
-  Serial.println("Turning right 90 degrees.");
-  motor2.setSpeed(255);
-  motor2.run(FORWARD);
-  motor3.setSpeed(255);
-  motor3.run(BACKWARD);
   delay(650); // Adjust the delay as needed
   Stop();
 }
 
-void turnRight180() {
-  Serial.println("Turning right 90 degrees.");
+void turnRight135() {
+  Serial.println("Turning right 135 degrees.");
   motor2.setSpeed(255);
   motor2.run(FORWARD);
   motor3.setSpeed(255);
@@ -153,55 +143,65 @@ void turnRight180() {
   Stop();
 }
 
-void turnRight225() {
-  Serial.println("Turning right 90 degrees.");
+void turnRight180() {
+  Serial.println("Turning right 180 degrees.");
   motor2.setSpeed(255);
   motor2.run(FORWARD);
   motor3.setSpeed(255);
   motor3.run(BACKWARD);
-  delay(1100); // Adjust the delay as needed
+  delay(1050); // Adjust the delay as needed
+  Stop();
+}
+
+void turnRight225() {
+  Serial.println("Turning right 225 degrees.");
+  motor2.setSpeed(255);
+  motor2.run(FORWARD);
+  motor3.setSpeed(255);
+  motor3.run(BACKWARD);
+  delay(1350); // Adjust the delay as needed
   Stop();
 }
 
 void turnRight270() {
-  Serial.println("Turning right 90 degrees.");
+  Serial.println("Turning right 270 degrees.");
   motor2.setSpeed(255);
   motor2.run(FORWARD);
   motor3.setSpeed(255);
   motor3.run(BACKWARD);
-  delay(1300); // Adjust the delay as needed
+  delay(1550); // Adjust the delay as needed
   Stop();
 }
 
 void turnRight315() {
-  Serial.println("Turning right 90 degrees.");
+  Serial.println("Turning right 315 degrees.");
   motor2.setSpeed(255);
   motor2.run(FORWARD);
   motor3.setSpeed(255);
   motor3.run(BACKWARD);
-  delay(1500); // Adjust the delay as needed
+  delay(1850); // Adjust the delay as needed
   Stop();
 }
 
 void turnRight360() {
-  Serial.println("Turning right 90 degrees.");
+  Serial.println("Turning right 360 degrees.");
   motor2.setSpeed(255);
   motor2.run(FORWARD);
   motor3.setSpeed(255);
   motor3.run(BACKWARD);
-  delay(1730); // Adjust the delay as needed
+  delay(2050); // Adjust the delay as needed
   Stop();
 }
 
-// Turn Left Movement 
+// Turn Left Movement
 
 void turnLeft45() {
-  Serial.println("Turning left 90 degrees.");
+  Serial.println("Turning left 45 degrees.");
   motor2.setSpeed(255);
   motor2.run(BACKWARD);
   motor3.setSpeed(255);
   motor3.run(FORWARD);
-  delay(250); // Adjust the delay as needed
+  delay(450); // Adjust the delay as needed
   Stop();
 }
 
@@ -211,22 +211,12 @@ void turnLeft90() {
   motor2.run(BACKWARD);
   motor3.setSpeed(255);
   motor3.run(FORWARD);
-  delay(450); // Adjust the delay as needed
-  Stop();
-}
-
-void turnLeft135() {
-  Serial.println("Turning left 90 degrees.");
-  motor2.setSpeed(255);
-  motor2.run(BACKWARD);
-  motor3.setSpeed(255);
-  motor3.run(FORWARD);
   delay(650); // Adjust the delay as needed
   Stop();
 }
 
-void turnLeft180() {
-  Serial.println("Turning left 90 degrees.");
+void turnLeft135() {
+  Serial.println("Turning left 135 degrees.");
   motor2.setSpeed(255);
   motor2.run(BACKWARD);
   motor3.setSpeed(255);
@@ -235,43 +225,54 @@ void turnLeft180() {
   Stop();
 }
 
-void turnLeft225() {
-  Serial.println("Turning left 90 degrees.");
+void turnLeft180() {
+  Serial.println("Turning left 180 degrees.");
   motor2.setSpeed(255);
   motor2.run(BACKWARD);
   motor3.setSpeed(255);
   motor3.run(FORWARD);
-  delay(1100); // Adjust the delay as needed
+  delay(1050); // Adjust the delay as needed
+  Stop();
+}
+
+
+void turnLeft225() {
+  Serial.println("Turning left 225 degrees.");
+  motor2.setSpeed(255);
+  motor2.run(BACKWARD);
+  motor3.setSpeed(255);
+  motor3.run(FORWARD);
+  delay(1350); // Adjust the delay as needed
   Stop();
 }
 
 void turnLeft270() {
-  Serial.println("Turning left 90 degrees.");
+  Serial.println("Turning left 270 degrees.");
   motor2.setSpeed(255);
   motor2.run(BACKWARD);
   motor3.setSpeed(255);
   motor3.run(FORWARD);
-  delay(1300); // Adjust the delay as needed
+  delay(1550); // Adjust the delay as needed
   Stop();
 }
 
 void turnLeft315() {
-  Serial.println("Turning left 90 degrees.");
+  Serial.println("Turning left 315 degrees.");
   motor2.setSpeed(255);
   motor2.run(BACKWARD);
   motor3.setSpeed(255);
   motor3.run(FORWARD);
-  delay(1500); // Adjust the delay as needed
+  delay(1850); // Adjust the delay as needed
   Stop();
 }
 
 void turnLeft360() {
-  Serial.println("Turning left 90 degrees.");
+  Serial.println("Turning left 360 degrees.");
   motor2.setSpeed(255);
   motor2.run(BACKWARD);
   motor3.setSpeed(255);
   motor3.run(FORWARD);
-  delay(1730); // Adjust the delay as needed
+  delay(2050); // Adjust the delay as needed
   Stop();
 }
 
@@ -281,7 +282,6 @@ void Stop() {
   motor3.setSpeed(0);
   motor3.run(RELEASE);
 }
-
 
 void right(){
   motor2.setSpeed(255);
@@ -317,6 +317,8 @@ void objBackwardElseForward() {
   // Reset the flag for the next iteration or command
   exitCheckAndMove = false;
 }
+
+
 
 void objLeftElseForward() {
   while (!exitCheckAndMove) {
@@ -355,7 +357,6 @@ void objRightElseForward() {
       forward();
     }
   }
-
   // Reset the flag for the next iteration or command
   exitCheckAndMove = false;
 }
@@ -381,3 +382,4 @@ bool checkObstacle() {
     return false; // No obstacle detected
   }
 }
+
